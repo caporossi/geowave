@@ -35,13 +35,13 @@ public class GeoServerAddCoverageStoreCommand extends
 	@Parameter(names = {
 		"-ws",
 		"--workspace"
-	}, required = false, description = "<workspace name>")
+	}, required = false, description = "workspace name")
 	private String workspace = null;
 
 	@Parameter(names = {
 		"-cs",
 		"--coverageStore"
-	}, required = false, description = "<coverage store name>")
+	}, required = false, description = "coverage store name")
 	private final String coverageStore = null;
 
 	@Parameter(names = {

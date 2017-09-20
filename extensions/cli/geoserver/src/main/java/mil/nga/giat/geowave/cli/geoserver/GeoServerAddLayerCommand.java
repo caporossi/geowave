@@ -46,7 +46,7 @@ public class GeoServerAddLayerCommand extends
 	@Parameter(names = {
 		"-ws",
 		"--workspace"
-	}, required = false, description = "<workspace name>")
+	}, required = false, description = "workspace name")
 	private String workspace = null;
 
 	@Parameter(names = {
@@ -64,7 +64,7 @@ public class GeoServerAddLayerCommand extends
 	@Parameter(names = {
 		"-sld",
 		"--setStyle"
-	}, description = "<default style sld>")
+	}, description = "default style sld")
 	private final String style = null;
 
 	@Parameter(description = "<GeoWave store name>")

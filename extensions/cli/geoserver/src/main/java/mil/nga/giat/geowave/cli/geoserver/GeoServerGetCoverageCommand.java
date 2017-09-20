@@ -38,13 +38,13 @@ public class GeoServerGetCoverageCommand extends
 	@Parameter(names = {
 		"-ws",
 		"--workspace"
-	}, required = false, description = "<workspace name>")
+	}, required = false, description = "workspace name")
 	private String workspace = null;
 
 	@Parameter(names = {
 		"-cs",
 		"--cvgstore"
-	}, required = true, description = "<coverage store name>")
+	}, required = true, description = "coverage store name")
 	private final String cvgstore = null;
 
 	@Parameter(description = "<coverage name>")

@@ -39,7 +39,7 @@ public class GeoServerAddStyleCommand extends
 	@Parameter(names = {
 		"-sld",
 		"--stylesld"
-	}, required = true, description = "<style sld file>")
+	}, required = true, description = "style sld file")
 	private final String stylesld = null;
 
 	@Parameter(description = "<GeoWave style name>")

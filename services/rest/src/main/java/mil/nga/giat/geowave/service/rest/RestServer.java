@@ -1,5 +1,6 @@
 package mil.nga.giat.geowave.service.rest;
 
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -53,9 +54,12 @@ public class RestServer extends
 				"mil.nga.giat.geowave").getSubTypesOf(
 						ServiceEnabledCommand.class)) {
 			try {
-				availableRoutes.add(
-						new RestRoute(
-								operation.newInstance()));
+				if (!Modifier.isAbstract(
+						operation.getModifiers())) {
+					availableRoutes.add(
+							new RestRoute(
+									operation.newInstance()));
+				}
 			}
 
 			catch (InstantiationException | IllegalAccessException e) {

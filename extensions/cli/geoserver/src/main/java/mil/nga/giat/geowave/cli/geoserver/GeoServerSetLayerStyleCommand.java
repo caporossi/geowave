@@ -39,7 +39,7 @@ public class GeoServerSetLayerStyleCommand extends
 	@Parameter(names = {
 		"-sn",
 		"--styleName"
-	}, required = true, description = "<style name>")
+	}, required = true, description = "style name")
 	private final String styleName = null;
 
 	@Parameter(description = "<layer name>")

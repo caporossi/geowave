@@ -36,13 +36,13 @@ public class GeoServerAddFeatureLayerCommand extends
 	@Parameter(names = {
 		"-ws",
 		"--workspace"
-	}, required = false, description = "<workspace name>")
+	}, required = false, description = "workspace name")
 	private String workspace = null;
 
 	@Parameter(names = {
 		"-ds",
 		"--datastore"
-	}, required = true, description = "<datastore name>")
+	}, required = true, description = "datastore name")
 	private final String datastore = null;
 
 	@Parameter(description = "<layer name>")

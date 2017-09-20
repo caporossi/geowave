@@ -45,7 +45,12 @@ public class ListStatsCommand extends
 	private static final Logger LOGGER = LoggerFactory.getLogger(
 			ListStatsCommand.class);
 
-	@Parameter(description = "<store name> [<adapter name>]")
+	@Parameter(names = {
+		"--adapterId"
+	}, description = "Optionally list a single adapter's stats")
+	private String adapterId = "";
+
+	@Parameter(description = "<store name>")
 	private List<String> parameters = new ArrayList<String>();
 
 	@Override
@@ -157,13 +162,15 @@ public class ListStatsCommand extends
 		// Ensure we have all the required arguments
 		if (parameters.size() < 1) {
 			throw new ParameterException(
-					"Requires arguments: <store name> [<adapterId>]");
+					"Requires arguments: <store name>");
 		}
-
+		if ((adapterId != null) && !adapterId.trim().isEmpty()) {
+			parameters.add(
+					adapterId);
+		}
 		super.run(
 				params,
 				parameters);
 		return null;
 	}
-
 }

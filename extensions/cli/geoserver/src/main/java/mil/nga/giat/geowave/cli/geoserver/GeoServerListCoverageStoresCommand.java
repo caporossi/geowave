@@ -35,7 +35,7 @@ public class GeoServerListCoverageStoresCommand extends
 	@Parameter(names = {
 		"-ws",
 		"--workspace"
-	}, required = false, description = "<workspace name>")
+	}, required = false, description = "workspace name")
 	private String workspace;
 
 	@Override

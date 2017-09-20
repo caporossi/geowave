@@ -38,7 +38,7 @@ public class GeoServerGetCoverageStoreCommand extends
 	@Parameter(names = {
 		"-ws",
 		"--workspace"
-	}, required = false, description = "<workspace name>")
+	}, required = false, description = "workspace name")
 	private String workspace;
 
 	@Parameter(description = "<coverage store name>")

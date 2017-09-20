@@ -35,13 +35,13 @@ public class GeoServerAddDatastoreCommand extends
 	@Parameter(names = {
 		"-ws",
 		"--workspace"
-	}, required = false, description = "<workspace name>")
+	}, required = false, description = "workspace name")
 	private String workspace = null;
 
 	@Parameter(names = {
 		"-ds",
 		"--datastore"
-	}, required = false, description = "<datastore name>")
+	}, required = false, description = "datastore name")
 	private final String datastore = null;
 
 	@Parameter(description = "<GeoWave store name>")
